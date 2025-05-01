@@ -1451,3 +1451,45 @@ body,html{
         transform: translateY(-2000px);
     }
 }
+.page-item-each {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+
+.page-item-each:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2); /* More 3D on hover/tap */
+}
+/* Floating/oscillating effect */
+@keyframes floatBounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+.social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-family: 'Inter', sans-serif;
+  font-size: 14px;
+  text-decoration: none;
+  gap: 6px;
+  animation: floatBounce 2s ease-in-out infinite;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1); /* makes icons white */
+}

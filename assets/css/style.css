@@ -1726,7 +1726,7 @@ body,html{
 .new-star {
   position: absolute;
   top: -6px;
-  right: -6px;
+  left: -6px;
   width: 32px;
   height: 32px;
   background: linear-gradient(45deg, red, orange, yellow);
@@ -1747,9 +1747,9 @@ body,html{
   justify-content: center;
   font-size: 10px;
   font-weight: bold;
-  color: white;
+  color: black;
   font-family: 'Inter', sans-serif;
-  animation: sparkle 1.5s infinite;
+  animation: sparkle 1s infinite;
 }
 
 @keyframes sparkle {

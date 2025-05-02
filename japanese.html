@@ -3,30 +3,98 @@
 <head>
   <meta charset="utf-8">
   <link href="assets/css/style.css" rel="stylesheet">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="assets/images/favicon.png" type="image/webp">
-  <link rel="apple-touch-icon" sizes="180x180" href="images/favicon.png">
-  <link rel="icon" href="assets/images/favicon.png" type="image/webp">
   <title>Japanese - EroSyn</title>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    .post-box {
+      display: flex;
+      align-items: center;
+      background-color: #ffffff;
+      border: 2px solid black;
+      border-radius: 12px;
+      margin: 20px auto;
+      padding: 10px;
+      width: 92%;
+      max-width: 500px;
+      box-shadow: 0 0 4px rgba(0,0,0,0.3);
+    }
+
+    .post-box img {
+      width: 70px;
+      height: 70px;
+      border-radius: 8px;
+      object-fit: cover;
+      margin-right: 12px;
+    }
+
+    .post-title {
+      font-family: 'Inter', sans-serif;
+      font-size: 16px;
+      font-weight: 600;
+      color: #000000;
+    }
+
+    .sparkle-dot {
+      width: 10px;
+      height: 10px;
+      background-color: #00ff00;
+      border-radius: 50%;
+      margin-right: 6px;
+      box-shadow: 0 0 6px #00ff00;
+      animation: blink 1.2s infinite;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.3; }
+    }
+
+    .social-bounce {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 12px;
+      animation: float 2.5s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-6px); }
+    }
+
+    .sticky-search {
+      margin-top: 24px;
+      margin-bottom: 12px;
+    }
+
+    .animated-background #stars1,
+    .animated-background #stars2,
+    .animated-background #stars3 {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background-repeat: repeat;
+      z-index: -1;
+    }
+  </style>
 </head>
 <body>
-  <!-- Snowfall Background Animation -->
+  <!-- Snowfall -->
   <section class="animated-background">
     <div id="stars1"></div>
     <div id="stars2"></div>
     <div id="stars3"></div>
   </section>
-  <!-- End Snowfall Background -->
 
   <div class="min-h-full flex-h-center" id="background_div">
-    <input type="hidden" value="https://bio.link" id="app-url">
-    <input type="hidden" value="null" id="is-featured">
     <canvas id="bg-canvas" class="background-overlay"></canvas>
 
     <div class="mt-48 page-full-wrap relative">
-      <input type="hidden" value="creator-page" id="page-type">
-      <img class="display-image m-auto" data-src="assets/images/IMG_3235.jpeg" src="assets/images/IMG_3235.jpeg" alt="[Your photo alt]"/>
+      <img class="display-image m-auto" src="assets/images/IMG_3235.jpeg" alt="[Your photo alt]"/>
       <h2 class="page-title page-text-color page-text-font mt-16 text-center" style="font-size: 28px;">EroSyn</h2>
       <h3 class="page-text-color page-text-font text-center" style="font-size: 18px; color: #cccccc; margin-top: 6px;">Japanese (JAV)</h3>
 
@@ -40,11 +108,11 @@
       <div class="social-bounce">
         <a href="https://t.me/+AJ7uszRdLkJiMTVi" target="_blank" style="display: flex; align-items: center; color: white; font-family: 'Inter', sans-serif; font-size: 14px; text-decoration: none; gap: 6px;">
           <span>Telegram</span>
-          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram" style="width: 18px; height: 18px; filter: brightness(0) invert(1);">
+          <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" style="width: 18px; height: 18px; filter: brightness(0) invert(1);">
         </a>
         <a href="https://instagram.com/erosyn.mp4" target="_blank" style="display: flex; align-items: center; color: white; font-family: 'Inter', sans-serif; font-size: 14px; text-decoration: none; gap: 6px;">
           <span>Instagram</span>
-          <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" style="width: 18px; height: 18px; filter: brightness(0) invert(1);">
+          <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" style="width: 18px; height: 18px; filter: brightness(0) invert(1);">
         </a>
       </div>
 
@@ -65,7 +133,7 @@
         </span>
       </div>
 
-      <!-- Posts -->
+      <!-- POSTS -->
       <div id="posts-container">
         <a href="https://1024terabox.com/s/1VO3j2GIW9PsWCSn9moZatQ" class="post-box" target="_blank">
           <img src="https://i.postimg.cc/ZRm1dfSB/116.jpg" alt="Post-1">
@@ -86,7 +154,7 @@
       const posts = document.querySelectorAll('.post-box');
       posts.forEach(post => {
         const title = post.querySelector('.post-title').textContent.toUpperCase();
-        post.style.display = title.includes(input) ? 'block' : 'none';
+        post.style.display = title.includes(input) ? 'flex' : 'none';
       });
     }
   </script>

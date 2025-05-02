@@ -1674,6 +1674,7 @@ body,html{
   position: sticky;
   top: 0;
   z-index: 999;
-  background-color: #1c1c1c; /* background behind the bar while scrolling */
+  backdrop-filter: blur(10px); /* Adds subtle background blur */
   padding-top: 12px;
+  transition: all 0.3s ease;
 }

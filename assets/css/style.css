@@ -1670,3 +1670,10 @@ body,html{
     transform: translateY(-6px);
   }
 }
+.sticky-search {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #1c1c1c; /* background behind the bar while scrolling */
+  padding-top: 12px;
+}

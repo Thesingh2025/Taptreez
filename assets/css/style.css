@@ -1514,3 +1514,6 @@ body,html{
   font-size: 16px;
   outline: none;
 }
+.divider {
+  color: black;
+}

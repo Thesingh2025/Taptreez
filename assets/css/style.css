@@ -1493,3 +1493,11 @@ body,html{
   height: 20px;
   filter: brightness(0) invert(1); /* makes icons white */
 }
+.green-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #00ff00;
+  border-radius: 50%;
+  animation: blink 1s infinite;
+}

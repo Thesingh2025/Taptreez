@@ -17,7 +17,7 @@
     <div id="stars2"></div>
     <div id="stars3"></div>
   </section>
-  <!-- End of Snowfall Background Animation -->
+  <!-- End Snowfall Background -->
 
   <div class="min-h-full flex-h-center" id="background_div">
     <input type="hidden" value="https://bio.link" id="app-url">
@@ -28,7 +28,7 @@
       <input type="hidden" value="creator-page" id="page-type">
       <img class="display-image m-auto" data-src="assets/images/IMG_3235.jpeg" src="assets/images/IMG_3235.jpeg" alt="[Your photo alt]"/>
       <h2 class="page-title page-text-color page-text-font mt-16 text-center" style="font-size: 28px;">EroSyn</h2>
-      <h3 class="page-text-color page-text-font text-center" style="font-size: 18px; color: #CCCCCC; margin-top: 6px;">Japanese (JAV)</h3>
+      <h3 class="page-text-color page-text-font text-center" style="font-size: 18px; color: #cccccc; margin-top: 6px;">Japanese (JAV)</h3>
 
       <!-- Active Now -->
       <div style="display: flex; justify-content: center; align-items: center; margin-top: 10px;">
@@ -66,20 +66,16 @@
       </div>
 
       <!-- Posts -->
-      <div id="post-container">
-        <div class="post-box">
-          <div class="post-title">Post-1 | Watch/Download</div>
-          <a href="https://1024terabox.com/s/1VO3j2GIW9PsWCSn9moZatQ" target="_blank">
-            <img src="https://i.postimg.cc/ZRm1dfSB/116.jpg" alt="Post-1">
-          </a>
-        </div>
+      <div id="posts-container">
+        <a href="https://1024terabox.com/s/1VO3j2GIW9PsWCSn9moZatQ" class="post-box" target="_blank">
+          <img src="https://i.postimg.cc/ZRm1dfSB/116.jpg" alt="Post-1">
+          <div class="post-title">Post-1</div>
+        </a>
 
-        <div class="post-box">
-          <div class="post-title">Post-2 | Watch/Download</div>
-          <a href="https://1024terabox.com/s/1DrntDnVD7wyt1lYtW7UqWA" target="_blank">
-            <img src="https://i.postimg.cc/kGf47zdN/74.png" alt="Post-2">
-          </a>
-        </div>
+        <a href="https://1024terabox.com/s/1DrntDnVD7wyt1lYtW7UqWA" class="post-box" target="_blank">
+          <img src="https://i.postimg.cc/kGf47zdN/74.png" alt="Post-2">
+          <div class="post-title">Post-2</div>
+        </a>
       </div>
     </div>
   </div>
@@ -90,45 +86,9 @@
       const posts = document.querySelectorAll('.post-box');
       posts.forEach(post => {
         const title = post.querySelector('.post-title').textContent.toUpperCase();
-        post.style.display = title.includes(input) ? 'flex' : 'none';
+        post.style.display = title.includes(input) ? 'block' : 'none';
       });
     }
   </script>
-
-  <style>
-    .post-box {
-      display: inline-block;
-      text-align: center;
-      margin: 12px;
-      border: 1px solid black;
-      padding: 10px;
-      border-radius: 10px;
-      max-width: 160px;
-      background-color: #1e1e1e;
-    }
-
-    .post-box img {
-      width: 100%;
-      max-width: 140px;
-      height: auto;
-      border-radius: 8px;
-      display: block;
-      margin: 0 auto;
-    }
-
-    .post-title {
-      color: white;
-      font-family: 'Inter', sans-serif;
-      font-size: 14px;
-      margin-top: 6px;
-    }
-
-    #post-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      margin-top: 20px;
-    }
-  </style>
 </body>
 </html>

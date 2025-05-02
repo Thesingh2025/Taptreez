@@ -1493,6 +1493,32 @@ body,html{
   height: 20px;
   filter: brightness(0) invert(1); /* makes icons white */
 }
+: 'Inter', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f2f2f2;
+}
+
+.display-image {
+  width: 130px;
+  height: 130px;
+  border-radius: 9999px;
+  display: block;
+  margin: 30px auto 10px;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 28px;
+  color: #ffffff;
+  margin: 0;
+}
+
+.active-status {
+  text-align: center;
+  margin-top: 4px;
+}
+
 .green-dot {
   display: inline-block;
   width: 10px;
@@ -1501,6 +1527,45 @@ body,html{
   border-radius: 50%;
   animation: blink 1s infinite;
 }
+
+.active-text {
+  color: white;
+  margin-left: 8px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.socials {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  margin-top: 14px;
+  animation: float 2s ease-in-out infinite;
+}
+
+.social-link {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.social-icon {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
+
 .search-container {
   text-align: center;
   margin: 24px 0;
@@ -1514,6 +1579,58 @@ body,html{
   font-size: 16px;
   outline: none;
 }
+
+.posts-container {
+  padding: 0 12px;
+}
+
+.page-item-wrap {
+  margin: 10px auto;
+  max-width: 500px;
+}
+
+.page-item-each {
+  display: flex;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s, box-shadow 0.2s;
+  padding: 12px;
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+}
+
+.page-item-each:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+}
+
+.link-each-image {
+  width: 64px;
+  height: 64px;
+  border-radius: 8px;
+  margin-right: 12px;
+  object-fit: cover;
+}
+
+.item-title-combo {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: nowrap;
+}
+
+.item-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
 .divider {
   color: black;
+}
+
+.watch-download {
+  color: #007bff;
 }

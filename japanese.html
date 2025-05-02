@@ -66,17 +66,21 @@
       </div>
 
       <!-- Posts -->
-      <div class="post" style="margin-top: 20px;">
-        <a href="https://1024terabox.com/s/1VO3j2GIW9PsWCSn9moZatQ" target="_blank" class="post-box">
-          <img src="https://i.postimg.cc/ZRm1dfSB/116.jpg" alt="Post-1">
+      <div id="post-container">
+        <div class="post-box">
           <div class="post-title">Post-1 | Watch/Download</div>
-        </a>
-        <a href="https://1024terabox.com/s/1DrntDnVD7wyt1lYtW7UqWA" target="_blank" class="post-box">
-          <img src="https://i.postimg.cc/kGf47zdN/74.png" alt="Post-2">
-          <div class="post-title">Post-2 | Watch/Download</div>
-        </a>
-      </div>
+          <a href="https://1024terabox.com/s/1VO3j2GIW9PsWCSn9moZatQ" target="_blank">
+            <img src="https://i.postimg.cc/ZRm1dfSB/116.jpg" alt="Post-1">
+          </a>
+        </div>
 
+        <div class="post-box">
+          <div class="post-title">Post-2 | Watch/Download</div>
+          <a href="https://1024terabox.com/s/1DrntDnVD7wyt1lYtW7UqWA" target="_blank">
+            <img src="https://i.postimg.cc/kGf47zdN/74.png" alt="Post-2">
+          </a>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -90,5 +94,41 @@
       });
     }
   </script>
+
+  <style>
+    .post-box {
+      display: inline-block;
+      text-align: center;
+      margin: 12px;
+      border: 1px solid black;
+      padding: 10px;
+      border-radius: 10px;
+      max-width: 160px;
+      background-color: #1e1e1e;
+    }
+
+    .post-box img {
+      width: 100%;
+      max-width: 140px;
+      height: auto;
+      border-radius: 8px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    .post-title {
+      color: white;
+      font-family: 'Inter', sans-serif;
+      font-size: 14px;
+      margin-top: 6px;
+    }
+
+    #post-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      margin-top: 20px;
+    }
+  </style>
 </body>
 </html>

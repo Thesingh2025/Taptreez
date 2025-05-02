@@ -1501,3 +1501,16 @@ body,html{
   border-radius: 50%;
   animation: blink 1s infinite;
 }
+.search-container {
+  text-align: center;
+  margin: 24px 0;
+}
+
+.search-container input {
+  padding: 10px;
+  width: 220px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  font-size: 16px;
+  outline: none;
+}

@@ -554,6 +554,18 @@
     });
   }
 </script>
+        <script>
+  window.addEventListener('scroll', function () {
+    const bar = document.querySelector('.sticky-search');
+    if (window.scrollY > 50) {
+      bar.style.transform = 'scale(1.02)';
+      bar.style.boxShadow = '0 4px 10px rgba(0, 0, 0, 0.2)';
+    } else {
+      bar.style.transform = 'scale(1)';
+      bar.style.boxShadow = 'none';
+    }
+  });
+</script>
     </body>
 
     <!--

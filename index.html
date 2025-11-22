@@ -1991,46 +1991,36 @@
         <img class="link-each-image" src="https://i.postimg.cc/XqnBDK6L/Post-117.jpg" alt="TeraBox Link"/>
         <span class="item-title text-center">Post-117</span>
     </a>
-</div>
-                </div>                                                                                
-            </div>
-        </div>
+<!-- Pagination Boxes -->
+      <a class="file-card next-page" href="page2.html"><span>Next → (File-101 to 200)</span></a>
+      <a class="file-card next-page" href="page3.html"><span>→ (File-201 to 300)</span></a>
+    </div>
+
+    <!-- Footer notice -->
+    <footer class="footer-note">
+      All contents are indexed from Internet. Contact us to remove.<br>
+      We have Policy of instant removal of any content.
+    </footer>
+
+  </div>
+
   <script>
-  function filterPosts() {
-    const input = document.getElementById("searchInput").value.trim().toLowerCase();
-    const allPosts = document.querySelectorAll(".page-item-wrap");
-
-    allPosts.forEach(post => {
-      const title = post.querySelector(".item-title").textContent.trim().toLowerCase();
-      if (input === "") {
-        post.style.display = "block";
-      } else {
-        post.style.display = title === `post-${input}` ? "block" : "none";
-      }
-    });
-  }
-</script>
-        <script>
-  window.addEventListener('scroll', function () {
-    const bar = document.querySelector('.sticky-search');
-    if (window.scrollY > 50) {
-      bar.style.transform = 'scale(1.02)';
-      bar.style.boxShadow = '0 4px 10px rgba(0, 0, 0, 0.2)';
-    } else {
-      bar.style.transform = 'scale(1)';
-      bar.style.boxShadow = 'none';
+    function filterFiles() {
+      const q = document.getElementById('searchInput').value.trim().toLowerCase();
+      document.querySelectorAll('.file-card').forEach(card => {
+        const title = card.querySelector('span').textContent.toLowerCase();
+        // Always show pagination boxes
+        if (card.classList.contains('next-page')) {
+          card.style.display = 'flex';
+        } else {
+          card.style.display = (q === '' || title.includes(q)) ? 'flex' : 'none';
+        }
+      });
     }
-  });
-</script>
-        </script>
-<!-- Cloudflare Web Analytics -->
-<script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "3b9c4ef5423e4b1f82cfd8a16de419c6"}'></script>
-<!-- End Cloudflare Web Analytics -->
-</body>
-    </body>
+  </script>
 
-    <!--
-    A different snowfall    
-    <script  src="assets/js/snowfall.js"></script>
-    -->
+  <!-- Cloudflare Web Analytics -->
+  <script defer src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token":"3b969ef5423e4b1f82c529383693"}'></script>
+</body>
 </html>
